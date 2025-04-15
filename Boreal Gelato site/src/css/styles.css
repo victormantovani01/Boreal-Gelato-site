@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/** General **/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff; /* mudança de cor no começo da pag*/
+}
+
+section {
+    padding: 28px 8%;
+}
+
+.section-title {
+    color: #b140fd; /* mudança de cor do titulo: cardapio*/
+    font-size: 25px;
+}
+
+.section-subtitle {
+    font-size: 35px;
+}
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b140fd; /* coloração do botao: ver cardapio*/
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+
+}
+
+.btn-default:hover { 
+    cursor: pointer;
+    background-color: #f877f2; /* mudança de cor dos botao*/
+}
+
+/** Header **/
+
+header {
+    width: 100%;
+    padding: 28px 8%;
+    position: sticky;
+    top: 0;
+    background-color: #be3131; /* mudança de cor da barra principal da pag*/
+    z-index: 3;
+    box-shadow: 5px 1px 10px rgba(0, 0, 0, 0.1); 
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;    
+}
+
+#navbar #nav_logo {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#nav_list {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #1d1d1dad;
+    font-weight: 600;
+}
+
+.nav-item.active a {
+    color: #1d1d1d;
+    
+    border-bottom: 3px solid #ffffff;
+}
+
+#mobile_btn {
+    display: none;
+}
+
+
+/** HOME */
+#home {
+    display: flex;
+    min-height: calc(100vh - 92px);
+    position: relative;
+}
+
+#home #cta {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    gap: 28px;
+}
+
+#home .shape {
+    width: 50%;
+    height: 100%;
+    border-radius: 40% 30% 0% 20%;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+}
+
+#home .title {
+    font-size: 4rem;
+    color: #1d1d1d;
+}
+
+#home .title span {
+    color: #b140fd;
+}
+
+#home .description {
+    font-size: 1.2rem;
+}
+
+#cta_buttons {
+    display: flex;
+    gap: 24px;
+}
+
+#phone_button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    text-decoration: none;
+    background-color: #ffffff; /* coloração do numero do cell*/
+    padding: 8px 14px;
+    border-radius: 12px;
+    color: #000000; /* coloração da or do numero do cell*/
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(14, 6, 6, 0.089); /* coloração da borda do fundo do numero */
+}
+
+#phone_button button {
+    box-shadow: none;
+}
+
+#cta_social_buttons {
+    display: flex;
+    gap: 18px;
+}
+
+#cta_social_buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #ffffff; /* coloração das redes sociais*/
+    color: #000000; /* coloração da logo das redes sociais*/
+    box-shadow: 0px 0px 12px 4px rgba(14, 10, 15, 0.178);
+    width: 45px;
+    height: 40px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+#cta_social_buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0,0,0,0.1); 
+}
+
+#home #banner {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 70%;
+    position: relative;
+    z-index: 2;
+}
+
+#home #banner img {
+    height: 100%;
+}
+
+/** Menu **/
+
+#menu {
+    background-color: #ffffff; /* coloração do fundo dos produtos*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#menu #dishes {
+    width: 100%; /* largura do fundo roxo dos produtos*/
+    display: flex;
+    justify-content: center;
+    gap: 24px; /* posição dos produtos*/
+    margin-top: 32px;
+}
+
+#menu #dishes .dish { /* configuração dos sorvetes */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 18px; /* espaçamento das letras*/
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    padding: 20px;
+    background-color: rgb(198, 73, 248); 
+    position: relative;
+    overflow: hidden;
+}
+
+#menu #dishes .dish-heart {  /* configuração dos sorvetes */
+    position: absolute;
+    background-color: #e9092e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px; /* tamanho do coração*/
+    color: #ffffff;
+    width: 70px;  /* largura em cima*/
+    height: 70px; /* largura lateral*/
+    right: -10px; /*local da logo*/
+    top: -10px; /* tamanho*/
+    border-radius: 0px 37.5px 0px 42.5px;
+}
+
+.dish-description {  /* escrita dos sorvetes */
+    color: #020303;
+    text-align: center;
+}
+
+.dish-rate i {  
+    color: #e90914; /* coloração das estrelas */
+}
+
+.dish-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/** Testimonials **/
+
+#testimonials {
+    min-height: calc(100vh - 92px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+#testimonial_chef {
+    width: 500px;
+    height: auto;
+}
+
+#testimonials .section-subtitle {
+    font-size: 48px;
+}
+
+#testimonials_content {
+    width: 50%;
+}
+
+#testimonials_content .section-subtitle {
+    margin-bottom: 30px;
+}
+
+.feedback {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff; /* coloração do fundo dos feedback */
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
+}
+
+#feedbacks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.feedback-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.feedback-content p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-content p span {
+    color: #e9092e; /* coloração das estrelas do feedback*/
+}
+
+/** Footer **/
+footer {
+    background: #b140fd;
+    position: relative;
+}
+
+#footer_items {
+    display: flex;
+    align-items: center;
+    padding: 0px 8% 24px 8%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #b140fd;
+    font-weight: 500;
+    color: #1d1d1d;
+}
+
+#copyright {
+    color: #1d1d1d;
+    font-weight: 500;
+    position: relative;
+}
+
+footer .nav-item a {
+    color: #1d1d1d;
+}
+
+#mobile_btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+#mobile_menu.active {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0px;
+}
+
+#mobile_menu.active .nav-item {
+    list-style: none;
+    text-align: center;
+}
+
+#mobile_menu .btn-default {
+    display: block;
+}
+
+/* Media query para tablets e dispositivos de tamanho médio */
+@media screen and (max-width: 1170px){
+    #nav_list, #navbar .btn-default {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+    }
+
+   .section-subtitle {
+        font-size: 30px !important;
+        text-align: center;
+    }
+
+    #home {
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #home #banner,
+    #banner img,
+    #home .shape {
+        display: none;
+    }
+    #home .description {
+        text-align: center;
+    }
+
+    #home #cta {
+        width: 100%;
+        align-items: center;
+    }
+
+    #home #cta .title {
+        text-align: center;
+    }
+
+    #phone_button button {
+        display: none;
+    }
+
+    #menu #dishes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #menu #dishes .dish { /* */
+        width: calc(50% - 12px);
+        height: auto;
+        min-height: 0%;
+    }
+
+    #testimonials {
+        flex-direction: column;
+    }
+
+    #testimonials .section-title {
+        text-align: center;
+    }
+
+    #testimonial_chef {
+        display: none;
+    }
+
+    #testimonials_content {
+        width: 70%;
+        height: auto;
+    }
+
+    #testimonials_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback {
+        flex-direction: column;
+    }
+}
+
+/* Media query para telas pequenas, como smartphones em modo retrato */
+@media only screen and (max-width: 600px){
+    #menu #dishes .dish {
+        width: calc(100% - 12px);
+    }
+
+    #testimonials_content {
+        width: 100%;
+    }
+
+    #footer_items {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn-default,
+    #phone_button {
+        font-size: 14px !important;
+    }
+}
